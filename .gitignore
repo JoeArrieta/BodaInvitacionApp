@@ -1,0 +1,21 @@
+# Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+*.dbmdl
+
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos temporales
+FileContentIndex/
+DesignTimeBuild/
+ProjectEvaluation/
+
+# Configuración de Azure (opcional)
+ServiceDependencies/
+
+# Otros
+*.log
+*.tmp
