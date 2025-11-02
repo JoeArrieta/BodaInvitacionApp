@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model IEnumerable<BodaInvitacionApp.Models.Confirmacion>
+
+<div class="espacio-header-agradecimiento">
+    <h2>Lista de Invitados</h2>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Mensaje</th>
+                <th>Confiró</th>
+                <th>Mesa</th>
+                <th>Pases Asignados</th>
+                <th>Pases Confirmados</th>
+                <th>Fecha</th>
+                <th>Link WhatsApp</th>
+                <th>Enviar Invitación</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invitado in Model)
+            {
+                <tr>
+                    <td>@invitado.Nombre</td>
+                    <td>@invitado.Telefono</td>
+                    <td>@invitado.Mensaje</td>
+                    <td class="@(invitado.ConfirmoAsistencia ? "table-success" : "table-danger")">@(invitado.ConfirmoAsistencia ? "Sí" : "No")</td>
+                    <td>@invitado.NomeroDeMesa</td>
+                    <td>@invitado.NumeroDePersonas</td>
+                    <td>@invitado.ConfirmoNoPases</td>
+                    <td>@invitado.FechaRegistro.ToString("g")</td>
+                    <td>
+                        <a asp-action="ConfirmarAsistencia" asp-route-id="@invitado.Id">confirmacion</a>
+                    </td>
+                    <td>
+                        <a asp-action="EnviarWhatsApp" asp-route-id="@invitado.Id" class="btn @(invitado.EnvioInvitacion ? "btn-success" : "btn-warning") btn-sm"><i class="fa-solid fa-share"></i></a>
+                    </td>
+                    <td>
+                        <form asp-action="EliminarInvitado" asp-route-id="@invitado.Id" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar a @invitado.Nombre?');">
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-action="CrearInvitado">Registrar Nuevo Invitado</a>

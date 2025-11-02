@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model BodaInvitacionApp.Models.Confirmacion
+
+<div class="espacio-header-agradecimiento">
+    <h2>Registrar Invitado</h2>
+
+    <form asp-action="CrearInvitado" method="post">
+        <div class="mb-3">
+            <label asp-for="Nombre" class="form-label">Nombre:</label>
+            <input asp-for="Nombre" class="form-control" />
+            <span asp-validation-for="Nombre"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Telefono" class="form-label">Teléfono:</label>
+            <input asp-for="Telefono" class="form-control" />
+            <span asp-validation-for="Telefono"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="NumeroDePersonas" class="form-label">Número de Pases:</label>
+            <input asp-for="NumeroDePersonas" class="form-control" type="number" />
+            <span asp-validation-for="NumeroDePersonas"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="NomeroDeMesa" class="form-label">Número de Mesa:</label>
+            <input asp-for="NomeroDeMesa" class="form-control" type="number" />
+            <span asp-validation-for="NomeroDeMesa"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Invitado</button>
+    </form>
+</div>
+
+<a asp-action="Invitados">Ver Lista de Invitados</a>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

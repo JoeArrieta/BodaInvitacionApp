@@ -1,0 +1,734 @@
+﻿@{
+    ViewData["Title"] = "Josue y Diana";
+}
+
+<div class="container text-center my-4 espacio-header" data-aos="fade-up" data-aos-anchor-placemant="top-center">
+    <div class="containerSound">
+        <div class="img-container">
+            <img src="imagenes/ImagenMusica1.jpg" alt="">
+            <div class="texto-sobre-imagen">
+                <div class="col-12">
+                    <div class="row pb-5">
+                        <div class="col-3">
+                        </div>
+                        <div class="col-6">
+                            <h5 id="titulo" class="mb-3 mt-3 bilbo-regular">Nuestra canción 💖</h5>
+                            <audio id="audioBoda" loop>
+                                <source src="~/audio/240279-a7692ed4-8f3e-4730-924d-2379a42d0f1e.mp3" type="audio/mpeg">
+                                Tu navegador no soporta audio.
+                            </audio>
+                            <div class="progressBar" id="progressBar">
+                                <div class="progress" id="progress"></div>
+                                <div class="duration">
+                                    <div class="row">
+                                        <div class="col-4"><span id="tiempoActual"></span></div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4"><span id="tiempoDuracion"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="controles">
+                                <i class="fa-solid fa-play" id="btnPlay"></i>
+                                <i class="fa-solid fa-pause" id="btnPause"></i>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                            <h1 class="bilbo-regular text-start">Diana</h1>
+                            <h1 class="bilbo-regular text-center"> & </h1>
+                            <h1 class="bilbo-regular pe-2 text-end">Josué</h1>
+                            <h2 class="bilbo-regular">¡Nos casamos!</h2>
+                        </div>
+                        <div class="col-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="main">
+    <div class="section-fondo img_sinBorde degradado-superior-derecha" data-aos="zoom-out" id="pensa">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Nuestra Boda</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black" data-aos="zoom-in-down">
+                <p class="lobster-regular fs-3">
+                    El amor nunca se da por vencido,
+                    jamás pierde la fe,
+                    siempre tiene esperanzas y
+                    se mantiene firme en toda circunstancia
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black">
+                <p class="lobster-regular fs-5">Corintios 13:7</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="masonry">
+        <a href="https://picsum.photos/800/600?1" data-lightbox="galeria" data-aos="fade-up"><img src="https://picsum.photos/400/600?1" alt="Imagen 1"></a>
+        <a href="https://picsum.photos/800/600?2" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="200"><img src="https://picsum.photos/400/300?2" alt="Imagen 2"></a>
+        <a href="https://picsum.photos/800/600?3" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="300"><img src="https://picsum.photos/400/500?3" alt="Imagen 3"></a>
+        <a href="https://picsum.photos/800/600?4" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="400"><img src="https://picsum.photos/400/400?4" alt="Imagen 4"></a>
+        <a href="https://picsum.photos/800/600?5" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="500"><img src="https://picsum.photos/400/600?5" alt="Imagen 5"></a>
+    </div>
+
+    <div class="pb-5" data-aos="zoom-out" id="conteo">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Conteo regresivo:</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="conteo-div bg-light col-5 text-center" data-aos="fade-right">
+                        <h5 class="text-black">Dias</h5>
+                        <h1 id="num_dias" class="text-black mt-3">00</h1>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="conteo-div bg-light col-5 text-center" data-aos="fade-left">
+                        <h5 class="text-black">Horas</h5>
+                        <h1 id="num_hora" class="text-black mt-3">00</h1>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="conteo-div bg-light col-5 text-center" data-aos="fade-right">
+                        <h5 class="text-black">Min.</h5>
+                        <h1 id="num_minu" class="text-black mt-3">00</h1>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="conteo-div bg-light col-5 text-center" data-aos="fade-left">
+                        <h5 class="text-black">Seg.</h5>
+                        <h1 id="num_segu" class="text-black mt-3">00</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-fondo img_sinBorde degradado-superior-derecha" data-aos="zoom-out" id="padrinos">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Nuestros padrinos</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black">
+                <div class="row" data-aos="fade-down-right">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Selene Arrieta Díaz
+                        </p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">&</p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down-left">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Fountaine Hernández Cruz
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black">
+                @* <p class="lobster-regular fs-5">Corintios 13:7</p> *@
+            </div>
+        </div>
+    </div>
+
+    <div class="pb-5" data-aos="zoom-out" id="padres">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>PAPÁS DE LA NOVIA</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black">
+                <div class="row" data-aos="fade-down-right">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Martha Leticia García Martínez
+                        </p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">&</p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down-left">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Juan Escalera Díaz
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1 pb-5">
+            <div class="col-12 text-center text-black">
+                @* <p class="lobster-regular fs-5">Corintios 13:7</p> *@
+            </div>
+        </div>
+    </div>
+
+    <div class="section-fondo img_sinBorde degradado-superior-derecha" data-aos="zoom-out" id="padres2">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>PADRES DEL NOVIO</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black">
+                <div class="row" data-aos="fade-down-right">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Luz Elena Díaz Zacarías
+                        </p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">&</p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-down-left">
+                    <div class="col-12">
+                        <p class="lobster-regular fs-1">
+                            Oscar Arrieta Duarte
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black">
+                @* <p class="lobster-regular fs-5">Corintios 13:7</p> *@
+            </div>
+        </div>
+    </div>
+
+    <div class="pb-5" data-aos="zoom-out" id="cerem">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Ceremonia</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/iglesia.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black" data-aos="fade-down-right">
+                <p class="lobster-regular fs-3">
+                    Iglesia de la Inmaculada Concepción
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black" data-aos="fade-down-left">
+                <p class="lobster-regular fs-5" id="txt_direcc_iglesia"></p>
+            </div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center" data-aos="fade-down-right">
+                <button class="btn btn-light" id="btn_ubic_iglesia" style="cursor:pointer;">
+                    Ver ubicación...<i class="fa-solid fa-location-dot fa-fade" style="color:blueviolet;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-fondo img_sinBorde degradado-superior-derecha" data-aos="zoom-out" id="salon">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Salón</h2>
+                    <img class="img-fuid img-thumbnail img_sinBorde" width="30%" height="25%" src="~/imagenes/novios_icono.png">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-3"></div>
+            <div class="col-6 text-center text-black" data-aos="fade-down-right">
+                <p class="lobster-regular fs-3">
+                    Boreal salon de eventos.
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center text-black" data-aos="fade-down-left">
+                <p class="lobster-regular fs-5" id="txt_direcc_salon"></p>
+            </div>
+        </div>
+        <div class="row pt-1">
+            <div class="col-12 text-center" data-aos="fade-down-right">
+                <button class="btn btn-light" id="btn_ubic_salon" style="cursor:pointer;">
+                    Ver ubicación...<i class="fa-solid fa-location-dot fa-fade" style="color:blueviolet;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pb-5" data-aos="zoom-out" id="agenda">
+        @* img anillos *@
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Itinerario</h2>
+                </div>
+            </div>
+        </div>
+        @* iconos *@
+        <div class="timeline text-center">
+            <div class="event" data-aos="fade-up">
+                <div class="icon" data-lucide="church"></div>
+                <div class="content">
+                    <h3>4:00 a 5:00 p.m.</h3>
+                    <p>Inicia la ceremonia religiosa</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon" data-lucide="camera"></div>
+                <div class="content">
+                    <h3>5:00 a 5:30 p.m.</h3>
+                    <p>Sesión de fotos de los novios</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon" data-lucide="concierge-bell"></div>
+                <div class="content">
+                    <h3>5:30 a 6:00 p.m.</h3>
+                    <p>Recepción del salón</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon" data-lucide="circle-question-mark"></div>
+                <div class="content">
+                    <h3>6:00 a 7:00 p.m.</h3>
+                    <p>Algo</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon" data-lucide="utensils"></div>
+                <div class="content">
+                    <h3>7:00 a 8:00 p.m.</h3>
+                    <p>Banquete</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon" data-lucide="circle-question-mark"></div>
+                <div class="content">
+                    <h3>8:00 a 9:00 p.m.</h3>
+                    <p>Algo</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon" data-lucide="wine"></div>
+                <div class="content">
+                    <h3>9:00 a 9:30 p.m.</h3>
+                    <p>Brindis familiar</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon" data-lucide="heart"></div>
+                <div class="content">
+                    <h3>9:30 a 10:00 p.m.</h3>
+                    <p>Primer baile de los novios</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon" data-lucide="cake"></div>
+                <div class="content">
+                    <h3>9:30 a 10:00 p.m.</h3>
+                    <p>Partida de pastel y ramo</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon" data-lucide="music"></div>
+                <div class="content">
+                    <h3>10:00 a 12:00 p.m.</h3>
+                    <p>Inicia la fiesta, música y diversión</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon" data-lucide="soup"></div>
+                <div class="content">
+                    <h3>11:00 p.m.</h3>
+                    <p>Chaskas</p>
+                </div>
+            </div>
+
+            <div class="event" data-aos="fade-up" data-aos-delay="700">
+                <div class="icon" data-lucide="moon"></div>
+                <div class="content">
+                    <h3>12:00 a.m.</h3>
+                    <p>Termina la celebración de la boda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5"  data-aos="zoom-out" id="pases">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Mis pases</h2>
+                    @* <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png"> *@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-12 text-black">                
+                @if (ViewBag.misPases > 0)
+                {
+                    <h1 class="bilbo-regular text-center section-title">@ViewBag.invitado</h1>
+                    <h2 class="text-center section-title">Tiene asignado @ViewBag.misPases pase/s.</h2>
+                }
+                else
+                {
+                    <h2 class="text-center section-title">No tiene pases asignados</h2>
+                }
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </div>
+
+    <div data-aos="zoom-out" id="confirmar">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Confirma aquí</h2>
+                </div>
+            </div>
+        </div>   
+        <div class="row">
+            <div class="col-12">
+                <div class="row pt-4">
+                    @if (ViewBag.misPases > 0)
+                    {
+                        <div class="col-12 d-flex justify-content-center">
+                            <a asp-controller="Invitacion" asp-action="ConfirmarAsistencia" asp-route-id="@ViewBag.Id" asp-route-pases="@ViewBag.misPases" class="btn btn-light">
+                                <i class="fa-solid fa-circle-check"></i> Enviar confirmación
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  data-aos="zoom-out" id="galeria">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <span>Diana y Josué</span>
+                    <h2>Galería</h2>
+                </div>
+            </div>
+        </div>
+        <div class="masonry">
+            <a href="/imagenes/ImagenMusica2.jpg" data-lightbox="galeria" data-aos="fade-up"><img src="/imagenes/ImagenMusica2.jpg" alt="Imagen 1" class="galeria-img" style="--img-width: 300px; --img-height: 400px;"></a>
+            <a href="https://picsum.photos/800/600?2" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="100"><img src="https://picsum.photos/400/300?2" alt="Imagen 2"></a>
+            <a href="https://picsum.photos/800/600?3" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="200"><img src="https://picsum.photos/400/500?3" alt="Imagen 3"></a>
+            <a href="https://picsum.photos/800/600?4" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="300"><img src="https://picsum.photos/400/400?4" alt="Imagen 4"></a>
+            <a href="https://picsum.photos/800/600?5" data-lightbox="galeria" data-aos="fade-up" data-aos-delay="400"><img src="https://picsum.photos/400/600?5" alt="Imagen 5"></a>
+        </div>
+    </div>
+
+    <!-- Botón que abre el modal -->
+    <div class="text-center pt-5">
+        <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#modalHoteles">
+            <i data-lucide="hotel"></i> 
+            @* 🏨 *@ Ver sugerencias de hoteles
+        </button>
+    </div>
+
+    <!-- Botón que abre mesa regalos amazon -->
+    <div class="text-center pt-5">
+        <a href="https://www.amazon.com.mx/wedding/registry/3NXJWD6EYFJY"
+           target="_blank" 
+           class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+            <i data-lucide="gift"></i>
+           Amazon Mesa de regalos
+        </a>
+    </div>
+
+    <!-- Botón que abre mesa regalos amazon -->
+    <div class="text-center pt-1">
+        <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51806109"
+           target="_blank"
+           class="btn btn-lg text-white"
+           style="background-color:#e10098; border-color:#e10098;">
+            <i data-lucide="gift"></i>
+            Liverpool Mesa de regalos @* 🎁 *@
+        </a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalHoteles" tabindex="-1" aria-labelledby="modalHotelesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light text-white">
+                    <h5 class="modal-title text-dark" id="modalHotelesLabel">Opciones de Hoteles</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="listaHoteles" class="list-group"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+
+@if (ViewBag.EsAdmin == true)
+{
+    <a asp-controller="Invitacion" asp-action="Invitados" asp-route-adminpass="miSuperClave" class="btn btn-secondary">
+        <i class="fa-solid fa-list-check"></i> Administrar invitados
+    </a>
+}
+@* <a asp-controller="Invitacion" asp-action="Gracias">Agradecimiento</a> *@
+
+
+<script>
+    const audio = document.getElementById("audioBoda");
+    const progress = document.getElementById("progress");
+    const progressBar = document.getElementById("progressBar");
+    const tiempoActual = document.getElementById("tiempoActual");
+    const tiempoDuracion = document.getElementById("tiempoDuracion");
+    const btnPlay = document.getElementById("btnPlay");
+    const btnPause = document.getElementById("btnPause");
+    const fec_evento = new Date("March 14, 2026 14:00:00").getTime();
+
+
+    document.addEventListener("DOMContentLoaded", function(event) {      
+
+
+        let txt_dir_igl = document.getElementById("txt_direcc_iglesia");
+        let txt_dir_sal = document.getElementById("txt_direcc_salon");
+
+        //código a ejecutar cuando existe la certeza de que el DOM está listo para recibir acciones
+        txt_dir_igl.textContent = "Miguel Hidalgo No. 103, La Placita, Ojocaliente Calvillo, Ags.";
+        txt_dir_sal.textContent = "Boulevard Rodolfo Landeros No. 924 los Arcos, Calvillo, Ags.";
+
+        
+    });
+
+
+
+    btnPause.style.display = "none";
+    const intervalo = setInterval(() => {
+        let fec_actual = new Date().getTime();
+        let diferencia = fec_evento - fec_actual;
+
+        if(diferencia <= 0){
+            clearInterval(intervalo);
+            return;
+        }
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor(diferencia % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById("num_dias").innerText = dias;
+        document.getElementById("num_hora").innerText = horas;
+        document.getElementById("num_minu").innerText = minutos;
+        document.getElementById("num_segu").innerText = segundos;
+
+    }, 1000);
+
+    document.addEventListener("click", function reproduceAudio() {
+        if (audio && audio.paused) {
+            audio.play();
+            btnPlay.style.display = "none";
+            btnPause.style.display = "inline-block";
+        }
+    }, { once: true });
+
+
+    // Evento para cerrar el collapse (sin límite)
+    document.addEventListener("click", function (e) {
+        let header = document.getElementById('miHeader');
+        let collapse = document.getElementById('miCollapse');
+        let ubicMaps = "";
+
+        if (header && collapse && !header.contains(e.target)) {
+            let bsCollapse = bootstrap.Collapse.getInstance(collapse);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            } else {
+                new bootstrap.Collapse(collapse, { toggle: false }).hide();
+            }
+        }
+
+        //Evento ver ubicacion
+        let btn_ubicIgle = document.getElementById("btn_ubic_iglesia");
+        let btn_ubicSalo = document.getElementById("btn_ubic_salon");
+        //Ubicacion iglesia maps
+        if(btn_ubicIgle && btn_ubicIgle.contains(e.target)){
+            ubicMaps = "https://maps.app.goo.gl/uybk97HkhgVb4PcMA";
+            window.open(ubicMaps);
+        }
+        //Ubicacion salon maps
+        if(btn_ubicSalo && btn_ubicSalo.contains(e.target)){
+            ubicMaps = "https://maps.app.goo.gl/5BMJBLPmMNV3zoey6";
+            window.open(ubicMaps);
+        }
+
+    });
+
+    // Función para formatear segundos a mm:ss
+    function formatTime(seconds) {
+        const minutos = Math.floor(seconds / 60);
+        const segundos = Math.floor(seconds % 60);
+        return `${minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
+    }
+
+    // Cuando el audio carga, muestra la duración
+    audio.addEventListener("loadedmetadata", () => {
+        tiempoDuracion.textContent = formatTime(audio.duration);
+    });
+
+    // Actualizar barra y tiempo actual
+    audio.addEventListener("timeupdate", () => {
+        const porcentaje = (audio.currentTime / audio.duration) * 100;
+        progress.style.width = porcentaje + "%";
+        tiempoActual.textContent = formatTime(audio.currentTime);
+    });
+
+    // Play
+    btnPlay.addEventListener("click", () => {
+        audio.play();
+        btnPlay.style.display = "none";
+        btnPause.style.display = "inline-block";
+    });
+
+    // Pause
+    btnPause.addEventListener("click", () => {
+        audio.pause();
+        btnPause.style.display = "none";
+        btnPlay.style.display = "inline-block";
+    });
+
+    // Permitir mover la barra de progreso
+    progressBar.addEventListener("click", (e) => {
+        const ancho = progressBar.clientWidth;
+        const clickX = e.offsetX;
+        const duracion = audio.duration;
+
+        audio.currentTime = (clickX / ancho) * duracion;
+    });
+
+    // JSON con los hoteles (podría venir de una API o AJAX)
+    const hoteles = [
+      { nombre: "Hotel La Gloria", link: "https://maps.app.goo.gl/q1ALfNPCYji7EEep8?g_st=aw"  },
+      { nombre: "Hotel Agape", link: "https://maps.app.goo.gl/4LbLdFuF5t44jPht6?g_st=aw"  },
+      { nombre: "Hotel Los Rinconcitos", link:"https://maps.app.goo.gl/s5hce66YCKhD22y97?g_st=aw"  },
+      { nombre: "Hotel Valle de Huejucar", link: "https://maps.app.goo.gl/aSNuwaeEvXHjExaR9?g_st=aw"  },
+      { nombre: "Hotel Casa de los rios", link: "https://maps.app.goo.gl/EGV1pYGyLBfoQMjZA?g_st=aw"  },
+      { nombre: "Hotel Cascada el Garruño", link:"https://maps.app.goo.gl/CGw2hXk4LT1SvwR87?g_st=aw"  },
+      { nombre: "Hotel Doña Chela", link: "https://maps.app.goo.gl/uEAZa11HbKiy6PD89?g_st=aw"  },
+      { nombre: "Hotel Casa Bugambilias", link:"https://maps.app.goo.gl/BUDR1D3mZQj1GkPCA?g_st=aw"  }
+    ];
+
+    // Renderizado dinámico de la lista
+    const lista = document.getElementById("listaHoteles");
+    hoteles.forEach(hotel => {
+      const item = document.createElement("div");
+      item.className = "list-group-item d-flex justify-content-between align-items-center";
+      item.innerHTML = `
+        <span>${hotel.nombre}</span>
+        <a href="${hotel.link}" target="_blank" class="btn btn-dark btn-sm">
+          Ver ubicación 
+          <i data-lucide="map-pin-house"></i>
+        </a>
+      `;
+      lista.appendChild(item);
+    });
+
+
+    AOS.init();
+
+
+</script>
