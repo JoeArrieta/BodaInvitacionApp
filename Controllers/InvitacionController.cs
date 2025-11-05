@@ -99,7 +99,7 @@ namespace BodaInvitacionApp.Controllers
 
             string mensaje = $"Hola {invitado.Nombre}, estás invitado a nuestra boda 'Josue y Diana'. " +
                 $"Será un honor contar con tu presencia, " +
-                $"por favor confirma aquí: https://bodainvitacion-dianayjosue-cvdpc2d3dzgfeghk.canadacentral-01.azurewebsites.net/?id={invitado.Id}";
+                $"por favor confirma aquí: https://bodadianayjosue.onrender.com/?id={invitado.Id}";
             string url = $"https://wa.me/52{invitado.Telefono}?text={Uri.EscapeDataString(mensaje)}";
 
             invitado.EnvioInvitacion = true;
