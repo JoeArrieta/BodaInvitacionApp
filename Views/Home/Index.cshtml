@@ -224,7 +224,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <span>Diana y Josué</span>
-                    <h2>PADRES DEL NOVIO</h2>
+                    <h2>PAPÁS DEL NOVIO</h2>
                     <img class="img-fuid img-thumbnail img_sinBorde" width="20%" height="15%" src="~/imagenes/anillosDorados.png">
                 </div>
             </div>
@@ -458,15 +458,16 @@
                 }
                 else
                 {
-                    <h2 class="text-center section-title">No tiene pases asignados</h2>
+                    <h2 class="text-center section-title">La fecha de confirmación expiró</h2>
+                    <h2 class="text-center section-title">Lamentamos que no puedas acompañarnos, pero nos vemos en otra ocasión.</h2>
                 }
             </div>
             <div class="col-3"></div>
         </div>
-        
+
     </div>
 
-    <div data-aos="zoom-out" id="confirmar">
+    <div class="pb-5" data-aos="zoom-out" id="confirmar">
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
@@ -476,13 +477,16 @@
             </div>
         </div>   
         <div class="row">
-            <div class="col-12">
+            <div class="col-12">                
                 <div class="row pt-4">
                     @if (ViewBag.misPases > 0)
                     {
                         <div class="col-12 d-flex justify-content-center">
-                            <a asp-controller="Invitacion" asp-action="ConfirmarAsistencia" asp-route-id="@ViewBag.Id" asp-route-pases="@ViewBag.misPases" class="btn btn-light">
-                                <i class="fa-solid fa-circle-check"></i> Enviar confirmación
+                            <a asp-controller="Invitacion" asp-action="ConfirmarAsistencia" asp-route-id="@ViewBag.Id" asp-route-pases="@ViewBag.misPases" 
+                                target="_blank"
+                                class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i> 
+                                Enviar confirmación
                             </a>
                         </div>
                     }
@@ -491,7 +495,7 @@
         </div>
     </div>
 
-    <div  data-aos="zoom-out" id="galeria">
+    <div class="pt-5"  data-aos="zoom-out" id="galeria">
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
