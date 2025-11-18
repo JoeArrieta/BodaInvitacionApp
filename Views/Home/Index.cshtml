@@ -483,8 +483,8 @@
                     {
                         <div class="col-12 d-flex justify-content-center">
                             <a asp-controller="Invitacion" asp-action="ConfirmarAsistencia" asp-route-id="@ViewBag.Id" asp-route-pases="@ViewBag.misPases" 
-                                target="_blank"
-                                class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+                            target="_blank"
+                            class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-circle-check"></i> 
                                 Enviar confirmación
                             </a>
@@ -524,23 +524,39 @@
     <!-- Botón que abre mesa regalos amazon -->
     <div class="text-center pt-5">
         <a href="https://www.amazon.com.mx/wedding/registry/3NXJWD6EYFJY"
-           target="_blank" 
-           class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+        target="_blank" 
+        class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
             <i data-lucide="gift"></i>
-           Amazon Mesa de regalos
+            Amazon Mesa de regalos
         </a>
     </div>
 
     <!-- Botón que abre mesa regalos amazon -->
     <div class="text-center pt-1">
         <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51806109"
-           target="_blank"
-           class="btn btn-lg text-white"
-           style="background-color:#e10098; border-color:#e10098;">
+        target="_blank"
+        class="btn btn-lg text-white"
+        style="background-color:#e10098; border-color:#e10098;">
             <i data-lucide="gift"></i>
             Liverpool Mesa de regalos @* 🎁 *@
         </a>
     </div>
+
+    
+
+    <!-- Botón admin invitados -->
+    @if (ViewBag.EsAdmin == true)
+    {
+        <div class="text-center pt-1">
+            <a asp-controller="Invitacion"
+               asp-action="Invitados"
+               asp-route-adminpass="miSuperClave"
+               target="_blank"
+               class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-check"></i> Administrar invitados
+            </a>
+        </div>
+    }
 
     <!-- Modal -->
     <div class="modal fade" id="modalHoteles" tabindex="-1" aria-labelledby="modalHotelesLabel" aria-hidden="true">
@@ -565,12 +581,6 @@
 </main>
 
 
-@if (ViewBag.EsAdmin == true)
-{
-    <a asp-controller="Invitacion" asp-action="Invitados" asp-route-adminpass="miSuperClave" class="btn btn-secondary">
-        <i class="fa-solid fa-list-check"></i> Administrar invitados
-    </a>
-}
 @* <a asp-controller="Invitacion" asp-action="Gracias">Agradecimiento</a> *@
 
 
